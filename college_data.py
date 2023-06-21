@@ -143,7 +143,7 @@ class CollegeDataProcessor:
 
 def show_submenu(table_name):
     while True:
-        print(f"===================={table_name}'s Menu=================")
+        print(f"\n\n===================={table_name}'s Menu=================")
         print(f"\t\t1. Show all {table_name}s")
         print(f"\t\t2. Show Single {table_name}")
         print(f"\t\t3. Update {table_name}")
@@ -170,7 +170,7 @@ processor = CollegeDataProcessor()
 
 while True:
     os.system("clear")
-    print("====================<Collage Name>=================")
+    print("\n\n====================<Collage Name>=================")
     print("\t\t1. Students")
     print("\t\t2. Branches")
     print("\t\t3. Professors")
