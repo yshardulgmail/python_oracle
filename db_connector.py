@@ -75,8 +75,14 @@ class DBConnector:
         if condition:
             query += " where " + condition
 
-        rows = self._execute_query(query)
-
+        ret_cursor = self._execute_query(query)
+        rows = []
+        if ret_cursor:
+            rows = ret_cursor.fetchall()
+            print("[INFO] No of selected records: ", len(rows))
+        else:
+            print("[INFO] 0 records selected.")
+        
         return rows
     
 

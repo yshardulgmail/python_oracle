@@ -193,6 +193,7 @@ while True:
             show_submenu("subject")
         case 5:
             processor.show_stud_branch()
+            input("Press enter to continue....")
         case 6:
             processor.show_stud_sub()
             input("Press enter to continue....")
