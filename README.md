@@ -17,7 +17,7 @@ Once oracle db is installed successfully follow these steps to create user. Try 
 4. exit from sqlplus
 5. login with - sqlplus pydbuser/oracle@localhost:1521/xepdb1
 
-## Steps to setup Git repository
+## Steps to clone Git repository
 1. Follow these steps to generate ssh key for gitrepo
    - ssh-keygen -t ed25519 -C "yshardul@gmail.com". Keep on pressing "Enter" to use all default locations and file names.
    - eval "$(ssh-agent -s)"
@@ -29,6 +29,9 @@ Once oracle db is installed successfully follow these steps to create user. Try 
    - Click on "New Ssh Key".
    - Enter Title for your key and paste the previously copied key in "Key" section.
    - Click on "Add SSH key".
+3. Run command - git clone git@github.com:yshardulgmail/python_oracle.git
+
+
 3. On Github's home page, click on "New" to create new repo.
 4. Enter repo name and make it public by selecting that option.
 5. Use ssh URL to clone the repo.
