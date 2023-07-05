@@ -36,4 +36,4 @@ Once oracle db is installed successfully follow these steps to create user. Try 
 ## Run the project
 1. Make sure your DB is running.
 2. Enter your cloned project repo - cd <cloned_dir_path>/python_oracle
-3. Run project using command - python db_connector.py
+3. Run project using command - python college_data.py
