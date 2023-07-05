@@ -31,10 +31,16 @@ Once oracle db is installed successfully follow these steps to create user. Try 
    - Click on "Add SSH key".
 3. Run command - git clone git@github.com:yshardulgmail/python_oracle.git
 
-
-3. On Github's home page, click on "New" to create new repo.
-4. Enter repo name and make it public by selecting that option.
-5. Use ssh URL to clone the repo.
+## Steps to create new repo
+1. On Github's home page, click on "New" to create new repo.
+2. Enter repo name and make it public by selecting that option.
+3. Use ssh URL to clone the repo.
+   <img width="548" alt="image" src="https://github.com/yshardulgmail/python_oracle/assets/43983174/d5ba1911-392d-45c6-8d4b-96e5df21bf0b">
+4. Run Command - git clone <ssh_URL_Copied_in_step_above>
+5. Once you have content in your repo run following commands in sequence -
+   -  git add .
+   -  git commit -a -v -m "<Some commit message>"
+   -  git push origin main
 
 ## Run the project
 1. Make sure your DB is running.
