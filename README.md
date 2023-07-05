@@ -33,3 +33,7 @@ Once oracle db is installed successfully follow these steps to create user. Try 
 4. Enter repo name and make it public by selecting that option.
 5. Use ssh URL to clone the repo.
 
+## Run the project
+1. Make sure your DB is running.
+2. Enter your cloned project repo - cd <cloned_dir_path>/python_oracle
+3. python db_connector.py
