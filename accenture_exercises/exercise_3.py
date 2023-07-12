@@ -26,10 +26,9 @@ def is_anagram(str1, str2):
     for ch in str1:
         # if any of the character from string 1 is not present in string 2 they are not anagrams
         if ch not in str2:
-            print("No")
-            return
+            return "No"
     
-    print("Yes")
+    return "Yes"
 
 def exercise_3():
     str1 = input("Enter String1:")
@@ -39,7 +38,7 @@ def exercise_3():
     if len(str1) != len(str2):
         print("No")
     else:
-        is_anagram(str1, str2)
+        print(is_anagram(str1, str2))
     
 
 exercise_3()
