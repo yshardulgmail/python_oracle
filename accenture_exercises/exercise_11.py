@@ -2,6 +2,8 @@
 #https://www.codingninjas.com/studio/library/30-most-common-accenture-coding-questions
 
 
+# I DID NOT UNDERSTAND PROBLEM STATEMENT OF EXERCISE 11. IN ABOVE LINK. SO I AM RESUMING FROM 12TH.
+
 """
 12. Perform the function Checkpassword (char str[], int n)
 Execute the function which happens to be 1 if the str is a valid password or it remains 0.

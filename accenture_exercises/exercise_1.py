@@ -48,18 +48,6 @@ def exercise_1():
     differenceofSum(n, m)
 
 
-def exercise_2():
-    arr = []
-
-    print("Enter array elements seaparated by space:")
-    arr = str(input("E.g. 2 3 4 5 6 7: ")).split(" ")
-    
-    if n <= 0 or m <= 0:
-        raise Exception("Please enter non zero positive numbers.")
-    
-    differenceofSum(n, m)
-
-# exercise_1()
-exercise_2()
+exercise_1()
 
 

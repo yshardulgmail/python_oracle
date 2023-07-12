@@ -3,40 +3,31 @@
 
 
 """
-2. Execute the given function.
-def LargeSmallSum(arr)
+10. Execute the function for the given purpose.
+Create a matrix and mention the elements in it. 
+Now, divide the main matrix into two halves in such a way that the elements 
+in index 0 are even, the elements in index 1 are odd, and so on.
 
-The function takes an integral arr which is of the size or length of its arguments.
-Return the sum of the second smallest element at odd position ‘arr’ 
-and the second largest element at the even position.
+Then arrange the values in ascending order for even and odd. 
+After this, calculate the sum of the second largest numbers from both even and odd matrices.
 
-Assumption
-
-Every array element is unique.
-Array is 0 indexed.
-Note:
-
-If the array is empty, return 0.
-If array length is 3 or <3, return 0.
- 
 Example
+The size of the array is 5.
+Element at 0 index: 3
+Element at 1 index: 4
+Element at 2 index: 1
+Element at 3 index: 7
+Element at 4 index: 9
 
-Input:
-Arr: 3 2 1 7 5 4
-
-Output: 7 
+Even array: 1,3,9
+Odd array: 4,7
 """
 
 def sort_arr(arr, desc=False):
     # Here i have used sorting algo
     for i in range(0, len(arr)-1):
         for j in range(1, len(arr)):
-            if desc:
-                if arr[i] < arr[j]:
-                    temp = arr[i]
-                    arr[i] = arr[j]
-                    arr[j] = temp
-            elif arr[i] > arr[j]:
+            if arr[i] > arr[j]:
                 temp = arr[i]
                 arr[i] = arr[j]
                 arr[j] = temp
@@ -54,18 +45,21 @@ def largeSmallSum(arr):
         else:
             odd_arr.append(arr[i])
 
-    # Sort the arrays in descending order
+    # Sort the arrays in ascending order
     sorted_even_arr = sort_arr(even_arr)
     sorted_odd_arr = sort_arr(odd_arr)
 
-    # Sorting in descending order could have been achieved using python inbuilt function 'sorted'. Like this - 
-    # sorted_even_arr = sorted(even_arr, reverse=True)
+    # Sorting could have been achieved using python inbuilt function 'sorted'. Like this - 
+    # sorted_even_arr = sorted(even_arr)
     # sorted_odd_arr = sorted(odd_arr)
 
     # Now that we have sorted arrays we can directly get the second largest from even array and second smallest from odd array
     print("Odd array:", sorted_odd_arr)
     print("Even array: ", sorted_even_arr)
-    print("Sum : ", sorted_even_arr[1] + sorted_odd_arr[1])  
+
+    # As the arrays are sorted in ascending order, the second largest element will be present at second last position
+    # in Python we can get second last element by providing minus(-) index in array like this - 
+    print("Sum : ", sorted_even_arr[-2] + sorted_odd_arr[-2])  
     
 
 def exercise_10():
@@ -73,9 +67,13 @@ def exercise_10():
 
     size = int(input("Enter size of array:"))
     
+    if size < 4:
+        raise Exception("Array size must be more than or equal to 4.")
+    
     for i in range(size):
         arr.append(int(input(f"Enter number for index {i}:")))
     
+    print(arr)
     largeSmallSum(arr)
     
 
