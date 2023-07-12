@@ -54,7 +54,7 @@ def ChatFrequentcharacter(str1, ch):
 
     return output_str
 
-def exercise_11():
+def exercise_13():
     str1 = input("Enter String1:")
     ch = input("Enter char:")
     
@@ -65,6 +65,6 @@ def exercise_11():
         print(ChatFrequentcharacter(str1, ch))
     
 
-exercise_11()
+exercise_13()
 
 

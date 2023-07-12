@@ -33,7 +33,7 @@ def operationchoices(num1, num2, op):
 
  
 
-def exercise_6():
+def exercise_8():
     n1 = int(input("Enter Num1:"))
     n2 = int(input("Enter Num2:"))
     print("Enter operation num:")
@@ -43,6 +43,6 @@ def exercise_6():
     print("Output :", operationchoices(n1, n2, op))
 
 
-exercise_6()
+exercise_8()
 
 

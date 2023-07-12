@@ -51,7 +51,7 @@ def calculate(num1, num2):
     return sum
  
 
-def exercise_6():
+def exercise_9():
     n1 = int(input("Enter Num1:"))
     n2 = int(input("Enter Num2:"))
 
@@ -61,6 +61,6 @@ def exercise_6():
     print("Output :", calculate(n1, n2))
 
 
-exercise_6()
+exercise_9()
 
 
