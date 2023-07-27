@@ -6,7 +6,9 @@
 1. Execute the given function.
 def differenceofSum(n.m)
 
-The function takes two integrals m and n as arguments. You are required to obtain the total of all integers ranging between 1 to n (both inclusive) which are not divisible by m. You must also return the distinction between the sum of integers not divisible by m with the sum of integers divisible by m.
+The function takes two integrals m and n as arguments. 
+You are required to obtain the total of all integers ranging between 1 to n (both inclusive) which are not divisible by m. 
+You must also return the distinction between the sum of integers not divisible by m with the sum of integers divisible by m.
 
 Assumption
 
@@ -29,9 +31,10 @@ def differenceofSum(n, m):
     i=1
     while i <= n: 
         if (i % m) == 0:
-            print(i)
+            print("divisible ", i)
             sum1 = sum1 + i
         else:
+            print("not divisible ", i)
             sum2 = sum2 + i
         i = i + 1
 

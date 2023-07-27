@@ -1,15 +1,14 @@
-#Answers to the coding exercises in this URL - 
-#https://www.codingninjas.com/studio/library/30-most-common-accenture-coding-questions
-
-
 """
-30. Write a function to check if the given two strings are anagrams or not. 
-Return ‘Yes’ if they are anagrams, otherwise, return ‘No’.
-Example
-Input 1: build
-Input 2: dubli
-Output:
-Yes 
+You are given the heads of two sorted linked lists list1 and list2.
+
+Merge the two lists into one sorted list. The list should be made by splicing together the nodes of the first two lists.
+
+Return the head of the merged linked list.
+
+Examples - 
+Input: list1 = [1,2,4], list2 = [1,3,4]
+Output: [1,1,2,3,4,4]
+
 """
 
 # Definition for singly-linked list.
