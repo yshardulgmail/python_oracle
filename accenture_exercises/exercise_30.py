@@ -55,10 +55,10 @@ class Solution:
         return copy_to_list
 
     def display_list(self, list_to_show):
-        first = list_to_show
-        while first:
-            print(first.val)
-            first = first.next
+        node = list_to_show
+        while node:
+            print(node.val)
+            node = node.next
 
     def mergeTwoLists(self) -> ListNode:
         arr1 = [1,2,4]
@@ -67,9 +67,12 @@ class Solution:
         list1 = self.populate_list(arr1)
         list2 = self.populate_list(arr2)
         
+        # self.display_list(list1)
         merged = end = ListNode(list1.val)
         end = self.copy_list(end, list1.next)
         end = self.copy_list(end, list2)
+
+        # self.display_list(merged)
 
         merged = self.sort_list(merged)
         self.display_list(merged)

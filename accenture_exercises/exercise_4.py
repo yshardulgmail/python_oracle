@@ -6,7 +6,8 @@
 4. Perform the following function. 
 def Productsmallpair(sum,arr)
 
-This function accepts the integers sum and arr. It is used to find the arr(j) and arr(k), where k ! = j. arr(j) and arr(k) should be the smallest elements in the array.
+This function accepts the integers sum and arr. 
+It is used to find the arr(j) and arr(k), where k ! = j. arr(j) and arr(k) should be the smallest elements in the array.
 
 Keep this in mind:
 

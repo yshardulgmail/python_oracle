@@ -31,12 +31,7 @@ def sort_arr(arr, desc=False):
     # Here i have used sorting algo
     for i in range(0, len(arr)-1):
         for j in range(1, len(arr)):
-            if desc:
-                if arr[i] < arr[j]:
-                    temp = arr[i]
-                    arr[i] = arr[j]
-                    arr[j] = temp
-            elif arr[i] > arr[j]:
+            if arr[i] > arr[j]:
                 temp = arr[i]
                 arr[i] = arr[j]
                 arr[j] = temp
