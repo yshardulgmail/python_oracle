@@ -2,6 +2,6 @@
     "config": {
         "db_user": "admin",
         "db_pass": "Luffy@1Piece",
-        "dsn": "(description= (retry_count=20)(retry_delay=3)(address=(protocol=tcps)(port=1521)(host=adb.ap-mumbai-1.oraclecloud.com))(connect_data=(service_name=g87fb60ff302710_pydb_low.adb.oraclecloud.com))(security=(ssl_server_dn_match=no)))"
+        "dsn": "(description= (retry_count=20)(retry_delay=3)(address=(protocol=tcps)(port=1521)(host=adb.ap-mumbai-1.oraclecloud.com))(connect_data=(service_name=g87fb60ff302710_pydb_low.adb.oraclecloud.com))(security=(ssl_server_dn_match=yes)))"
     }
 }

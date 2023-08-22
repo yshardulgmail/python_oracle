@@ -54,7 +54,9 @@ class CollegeDataProcessor:
         for row in rows:
             data_table.add_row(row)
 
-        print(data_table.get_formatted_string())
+        print(data_table)
+
+        # print(data_table)
     
     def show_single_data(self, table_name, id):
         self.show_data(table_name, "id="+str(id))
@@ -107,7 +109,7 @@ class CollegeDataProcessor:
         for row in rows:
             data_table.add_row(row)
 
-        print(data_table.get_formatted_string())
+        print(data_table)
 
 
     def show_stud_branch(self):
@@ -117,7 +119,7 @@ class CollegeDataProcessor:
         for row in rows:
             data_table.add_row(row)
 
-        print(data_table.get_formatted_string())
+        print(data_table)
 
 
     def show_stud_sub(self):
@@ -127,7 +129,7 @@ class CollegeDataProcessor:
         for row in rows:
             data_table.add_row(row)
 
-        print(data_table.get_formatted_string())
+        print(data_table)
 
     
     def show_prof_sub(self):
@@ -137,7 +139,7 @@ class CollegeDataProcessor:
         for row in rows:
             data_table.add_row(row)
 
-        print(data_table.get_formatted_string())
+        print(data_table)
 
 
 
@@ -151,19 +153,18 @@ def show_submenu(table_name):
         print(f"\t\t4. Delete {table_name}")
         print("\t\t5. Back")
         stud_choice = int(input("Enter your choice: "))
-        match stud_choice:
-            case 1:
+        if stud_choice == 1:
                 processor.show_data(table_name)
-            case 2:
+        elif stud_choice == 2:
                 id = int(input(f"Enter {table_name} id: "))
                 processor.show_single_data(table_name, id)
-            case 3:
+        elif stud_choice == 3:
                 id = int(input(f"Enter {table_name} id: "))
                 processor.update_data(table_name, id)
-            case 4:
+        elif stud_choice == 4:
                 id = int(input(f"Enter {table_name} id: "))
                 processor.delete_data(table_name, id)
-            case 5:
+        elif stud_choice == 5:
                 break
 
 
@@ -183,28 +184,27 @@ while True:
     print("\t\t9. Exit")
 
     choice = int(input("Enter your choice: "))
-    match choice:
-        case 1:
+    if choice == 1:
             show_submenu("student")
-        case 2:
+    elif choice == 2:
             show_submenu("branch")
-        case 3:
+    elif choice == 3:
             show_submenu("professor")
-        case 4:
+    elif choice == 4:
             show_submenu("subject")
-        case 5:
+    elif choice == 5:
             processor.show_stud_branch()
             input("Press enter to continue....")
-        case 6:
+    elif choice == 6:
             processor.show_stud_sub()
             input("Press enter to continue....")
-        case 7:
+    elif choice == 7:
             processor.show_prof_branch()
             input("Press enter to continue....")
-        case 8:
+    elif choice == 8:
             processor.show_prof_sub()
             input("Press enter to continue....")
-        case 9:
+    elif choice == 9:
             break
 
 
