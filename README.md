@@ -1,6 +1,9 @@
 # Collage Resource Management
 In this project we are connecting oracle db using python. We are performing CRUD operations on the data. We are initiallizing database with all the branches data which includes information on students, subjects and professors. 
 
+## Project Architecture
+
+
 ## Environment setup
 - Follow first 3 steps for Windows listed on this page - https://www.oracle.com/database/technologies/appdev/python/quickstartpythononprem.html
 - Install git bash - https://gitforwindows.org/

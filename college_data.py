@@ -1,12 +1,12 @@
 import os
 from db_connector import DBConnector
-from common_utils import load_json
+from utils.common_utils import load_json
 from prettytable import PrettyTable
 
 
 class CollegeDataProcessor:
     def __init__(self) -> None:
-        json_data = load_json("db_connection.json")
+        json_data = load_json("config/db_connection.json")
         db_config = json_data["config"]
         self._db_conn = DBConnector(db_config["db_user"], db_config["db_pass"],  db_config["dsn"], is_cloud=True)
         print("[INFO] Initiallizing databbase....")
@@ -15,7 +15,7 @@ class CollegeDataProcessor:
 
 
     def _initiallize(self):
-        db_data = load_json("db_data.json")
+        db_data = load_json("config/db_data.json")
         table_data = db_data["table_data"]
         # table_names = table_data.keys()
         drop_constraints = db_data["drop_constraints"]
