@@ -12,6 +12,7 @@ Output: s = “much very programming love i”
 
 def reverse_words(inp_str):
     words = inp_str.split(" ")
+    print(words)
     words_length = len(words)
     output_str = ""
     for i in range(words_length - 1, -1, -1):

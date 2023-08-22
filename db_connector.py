@@ -1,13 +1,29 @@
 import oracledb
+import ssl
+
+try:
+    _create_unverified_https_context = ssl._create_unverified_context
+except AttributeError:
+    # Legacy Python that doesn't verify HTTPS certificates by default
+    pass
+else:
+    # Handle target environment that doesn't support HTTPS verification
+    ssl._create_default_https_context = _create_unverified_https_context
 
 class DBConnector:
-    def __init__(self, username, password, dsn="localhost/xepdb1", port=1521) -> None:
+    def __init__(self, username, password, dsn="localhost/xepdb1", port=1521, is_cloud=False) -> None:
         try:
-            self.conn = oracledb.connect(
-                            user=username,
-                            password=password,
-                            dsn=dsn,
-                            port=port)
+            if not is_cloud:
+                self.conn = oracledb.connect(
+                                user=username,
+                                password=password,
+                                dsn=dsn,
+                                port=port)
+            else:
+                self.conn = oracledb.connect(
+                                user=username,
+                                password=password,
+                                dsn=dsn)
             self.cursor = self.conn.cursor()
             self.conn.autocommit = True
             print("[INFO] Database connection was successful!!")

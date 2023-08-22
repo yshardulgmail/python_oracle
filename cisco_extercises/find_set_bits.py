@@ -15,11 +15,15 @@ Binary representation of 13 is 1101 and has 3 set bits
 def count_set_bits(n):
     count = 0
     while (n):
-        
+        print("n =", n)
+        print("count before =", count)
+
         count += n & 1
+        print("count after =", count)
         n >>= 1
     return count
  
 
-i = 9
+i = 13
+# 1101
 print(count_set_bits(i))

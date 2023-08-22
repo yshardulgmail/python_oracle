@@ -6,8 +6,9 @@ from prettytable import PrettyTable
 
 class CollegeDataProcessor:
     def __init__(self) -> None:
-        db_config = load_json("db_connection.json")["config"]
-        self._db_conn = DBConnector(db_config["db_user"], db_config["db_pass"],  db_config["dsn"], db_config["port"])
+        json_data = load_json("db_connection.json")
+        db_config = json_data["config"]
+        self._db_conn = DBConnector(db_config["db_user"], db_config["db_pass"],  db_config["dsn"], is_cloud=True)
         print("[INFO] Initiallizing databbase....")
         self._initiallize()
         print("[INFO] Database initialization completed.")

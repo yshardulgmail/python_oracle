@@ -33,7 +33,7 @@ def get_largest(arr, k):
     # first we will sort array in descending order. 
     # It will be easy to get 'k'th largest element once array sorted in descending order
     sorted_array = sort_arr(arr)
-    return sorted_array[k] 
+    return sorted_array[k-1] 
 
 
 def kth_largest():
