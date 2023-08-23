@@ -28,7 +28,7 @@ def sort_arr(arr):
                 temp = arr[j]
                 arr[j] = arr[j+1]
                 arr[j+1] = temp
-         
+    
     return arr
 
 def get_largest_number(arr):
